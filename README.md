@@ -1,10 +1,10 @@
-# Bidnamic API with HTML Template
+# Bidnamic RESTful API
 
-<img src="preview.png" alt="drawing"/>
+<img src="logo.png" alt="drawing" width="500"/>
 
 ## Summary
-The Bidnamic API is a RESTful API that retrieves the Top 10 Search Terms by ROAS for a campaign `structure_value`. The HTML template displays the Top 10 Search Terms by ROAS by Nike's `structure_value`
-> A valid token is required to access the endpoint.
+The Bidnamic API is a RESTful API that retrieves the Top 10 Search Terms by ROAS for a campaign `structure_value`
+> A valid token is required to access the endpoint. Create a Django `superuser` to gain permission.
 
 ## Requirements
 * Python 3.8 or higher
@@ -18,13 +18,13 @@ The Bidnamic API is a RESTful API that retrieves the Top 10 Search Terms by ROAS
 Clone the repository using:
 
 ```
-git clone https://github.com/AugustineEbiem/bidnamic-fullstack-challenge.git
+git clone https://github.com/AugustineEbiem/bidnamic-python-challenge.git
 ```
 
 Once cloned, you can open the project folder:
 
 ``` 
-cd bidnamic-fullstack-challenge
+cd bidnamic-python-challenge/bidnamic-task
 ```
 
 
@@ -59,7 +59,22 @@ python manage.py runserver
 
 ## Backend workflow
 
-The API endpoints:
+### Database
+
+The Database entries can be found in the following files:
+
+```
+adgroups.csv
+```
+```
+campaigns.csv
+```
+```
+search_terms.csv
+```
+
+### API endpoints
+
 ```
 http://localhost:8000/api/v1/structure_value/nike/1578411800/
 ```
@@ -75,13 +90,4 @@ http://localhost:8000/api/v1/structure_value/puma/1578630235/
 check server endpoint:
 ```
 http://localhost:8000/api/v1/checkserver
-```
-## Frontend workflow
-Home page:
-```
-http://localhost:8000
-```
-Sample Login page:
-```
-http://localhost:8000/login/
 ```
